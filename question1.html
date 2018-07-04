@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+
+	var arr = [ 2,5,8,8,9,6,7,3];
+	//document.write(arr[0]);
+	arr.sort();
+	var target = [5,11,4];
+	for (var i=0; i<target.length; i++) {
+	// document.write(i+"<br />");
+	var c = target[i];
+	var result = -1111111;
+	if(arr.includes(target[i]))
+	{
+	document.write(target[i]+"<br />");
+	}
+	else if(arr[0] >= c)
+	{
+	document.write(arr[0]+"<br />");
+	}
+
+	else if(arr[arr.length-1] <= c)
+	{
+	document.write(arr[arr.length-1]+"<br />");
+	}
+	else
+	{
+		var j =0;
+		while(arr[j]<=c)
+	  {
+		j++;
+	  }
+	 var ldiff=c-arr[j-1];
+	 var udiff=arr[j]-c;
+	  if(ldiff<udiff)
+	  {
+		result = arr[j-1];
+	  }
+	  else
+	  {
+		result = arr[j];
+	  }
+	document.write(result+" <br />");
+	}
+
+	}
+	</script>
+</body>
+</html>

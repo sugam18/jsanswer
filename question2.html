@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	/* Write a JS code for finding the maximum repeated string in an array (e.g. var arr = [ “and”,”I”,”and”,”am”,”and “ I”,”and”]) */
+
+	var arr = ['and','I','and','am','and', 'I','and'];
+	var dummy;
+	var max = 0;
+	for(var i =0;i<arr.length;i++){
+	dummy = 0;
+		for (var j=i;j<arr.length;j++) {
+			if (arr[i] === arr[j]) {
+				dummy++;
+			}
+		}
+		if (dummy > max) { max = dummy;}
+	}
+	document.write(max);
+</script>
+
+</body>
+</html>

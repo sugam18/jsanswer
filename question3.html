@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+	/*Write a JS code which will print Fibonacci series where End value is not greater than 33. (e.g. 0112358) */
+	var maxLimit = 33;
+	function getFibonacci(maxLimit) {
+	var first = 0;
+	var second = 1;
+	var total = 0;
+	document.write(first+" "+second);
+	  for(var i = 2; ; i++){
+		total = first + second;
+		if(total > maxLimit)
+		  break;
+		first = second;
+		second  = total;
+		document.write(" "+total);
+		}
+	  }
+	 getFibonacci(maxLimit);
+    
+</script>
+
+</body>
+</html>
